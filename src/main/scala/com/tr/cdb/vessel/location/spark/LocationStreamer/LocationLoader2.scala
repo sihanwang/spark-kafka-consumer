@@ -20,7 +20,7 @@ object LocationLoader2 {
 
     val ssc = new StreamingContext(conf, Seconds(10))
 
-    val topics = List(("vessel_location", 4)).toMap
+    val topics = List(("vessel_location", 1)).toMap
 
     val topicLines = KafkaUtils.createStream(ssc, "dsj-s6:2181,dsj-s3:2181,dsj-s1:2181/kafka", "stream_group", topics)
 
